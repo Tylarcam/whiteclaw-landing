@@ -1,0 +1,10 @@
+# Fix npm deprecation: use --omit=dev instead of --production
+[phases.install]
+cmds = ["npm install --omit=dev"]
+
+# Ensure build runs and produces dist/
+[phases.build]
+cmds = ["npm run build"]
+
+[variables]
+NODE_ENV = "production"
