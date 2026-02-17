@@ -53,7 +53,7 @@ const testimonials = [
 
 export default function WhiteClawDeliverables() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="testimonials" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
       
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

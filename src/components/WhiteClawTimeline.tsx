@@ -24,7 +24,7 @@ const timelineSteps = [
 
 export default function WhiteClawTimeline() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section id="whiteclaw" className="relative py-24 lg:py-32">
       <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/5 via-transparent to-transparent" />
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-cyan-400/10 rounded-full blur-[120px] -translate-y-1/2" />
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px] -translate-y-1/2" />
