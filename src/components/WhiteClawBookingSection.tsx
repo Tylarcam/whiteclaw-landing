@@ -18,11 +18,11 @@ export default function WhiteClawBookingSection() {
           <div className="flex items-center justify-center gap-3 mb-6">
             <Calendar size={32} className="text-cyan-400" />
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Book Your Strategy Audit or 48-Hour Build
+              Get the Audit ($39) or Book Strategy Call ($100/hr)
             </h2>
           </div>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Choose your path: Strategy Audit ($150) or 48-Hour Build ($1,997). We'll confirm which option you want after you submit.
+            Choose your path: WhiteClaw Audit ($39) for instant blueprint, or Strategy Call ($100/hr) for done-for-you setup. We'll confirm which option you want after you submit.
           </p>
         </motion.div>
 

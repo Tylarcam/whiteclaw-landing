@@ -3,21 +3,21 @@ import { Calendar, Zap, Bot, ArrowRight } from 'lucide-react'
 
 const timelineSteps = [
   {
-    icon: Calendar,
-    title: 'Day 1: Strategy Audit',
-    description: '60-minute workflow audit. Walk away with your custom automation blueprint (DIY) or book a 48-Hour Build for done-for-you deployment.',
+    icon: Zap,
+    title: 'Step 1: Get the Audit ($39)',
+    description: 'Instant AI-powered workflow audit. You get a custom automation blueprint, prompt templates, and implementation roadmap—delivered in minutes. No wait.',
     color: 'cyan'
   },
   {
-    icon: Zap,
-    title: 'Day 2-7: Implementation',
-    description: 'Follow your playbook. We provide support via email if you hit any snags.',
+    icon: Calendar,
+    title: 'Step 2: Strategy Call ($100/hr)',
+    description: 'Book a 60-minute call when you want expert guidance. We walk through your blueprint and either help you DIY or build it for you.',
     color: 'purple'
   },
   {
     icon: Bot,
-    title: 'Week 2: WhiteClaw Upgrade',
-    description: 'Seen results? Upgrade to automated execution. Your agent runs the workflows 24/7.',
+    title: 'Step 3: Automation Live',
+    description: 'Implement your blueprint (DIY or done-for-you). Your AI workflows run on autopilot. Scale when ready.',
     color: 'cyan'
   }
 ]
@@ -38,13 +38,13 @@ export default function WhiteClawTimeline() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            What happens after the strategy call?
+            How does this work?
           </h2>
           <p className="text-xl text-cyan-400 font-medium mb-6">
-            See results in 48 hours, then scale with WhiteClaw automation.
+            Audit first ($39). Strategy call when ready ($100/hr). Working AI either way.
           </p>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Our proven pathway gets you unstuck fast, then provides a clear upgrade path to full automation when you're ready.
+            The $39 audit gives you instant clarity. The strategy call gets it built. Both encourage you to lock in the automation.
           </p>
         </motion.div>
 
@@ -97,7 +97,7 @@ export default function WhiteClawTimeline() {
           </div>
         </div>
 
-        {/* WhiteClaw CTA */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,25 +109,13 @@ export default function WhiteClawTimeline() {
             <div className="flex items-center justify-center gap-3 mb-6">
               <Bot size={32} className="text-cyan-400" />
               <h3 className="text-2xl lg:text-3xl font-bold text-white">
-                Want to skip straight to WhiteClaw?
+                Ready to get your AI workflow unstuck?
               </h3>
             </div>
             <p className="text-slate-400 mb-8 text-lg">
-              No problem! Start with the complete automation solution and get results even faster.
+              Start with the $39 audit for instant clarity. Or book the $100/hr strategy call for done-for-you setup.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={() => {
-                  const element = document.querySelector('#book')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
-                className="px-8 py-4 text-base font-semibold bg-cyan-400 text-slate-950 rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 glow-cyan"
-              >
-                Start with WhiteClaw Pilot →
-                <Bot size={18} />
-              </button>
               <button
                 onClick={() => {
                   const element = document.querySelector('#pricing')
@@ -135,9 +123,21 @@ export default function WhiteClawTimeline() {
                     element.scrollIntoView({ behavior: 'smooth' })
                   }
                 }}
+                className="px-8 py-4 text-base font-semibold bg-cyan-400 text-slate-950 rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 glow-cyan"
+              >
+                Get the Audit — $39
+                <Bot size={18} />
+              </button>
+              <button
+                onClick={() => {
+                  const element = document.querySelector('#book')
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
                 className="px-8 py-4 text-base font-semibold bg-white/5 text-white rounded-xl border border-white/10 hover:bg-white/10 transition-all flex items-center justify-center gap-2"
               >
-                Compare Options
+                Book Strategy Call — $100/hr
                 <ArrowRight size={18} />
               </button>
             </div>
@@ -156,15 +156,15 @@ export default function WhiteClawTimeline() {
           <div className="flex justify-center items-center gap-8 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-              <span className="text-slate-400">Day 1: Unblocked</span>
+              <span className="text-slate-400">Today: Audit delivered</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-              <span className="text-slate-400">Week 1: Working</span>
+              <span className="text-slate-400">This week: Strategy call</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-              <span className="text-slate-400">Week 2: Automated</span>
+              <span className="text-slate-400">Next: Working AI</span>
             </div>
           </div>
         </motion.div>

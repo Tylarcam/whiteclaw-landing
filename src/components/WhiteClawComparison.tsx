@@ -60,9 +60,9 @@ export default function WhiteClawComparison() {
                 <td className="py-3 px-4 sm:px-6 bg-cyan-400/5 border-l-2 border-cyan-400/50">
                   <span className="flex items-center gap-2 text-white font-semibold">
                     <Check size={16} className="text-cyan-400 flex-shrink-0" />
-                    48 hours
+                    Instant audit · Done-for-you on call
                   </span>
-                  <span className="block text-xs text-cyan-400">(we build)</span>
+                  <span className="block text-xs text-cyan-400">($39 + $100/hr)</span>
                 </td>
               </tr>
               <tr className="border-b border-white/5">
@@ -78,9 +78,9 @@ export default function WhiteClawComparison() {
                 <td className="py-3 px-4 sm:px-6 bg-cyan-400/5 border-l-2 border-cyan-400/50">
                   <span className="flex items-center gap-2 text-white font-semibold">
                     <Check size={16} className="text-cyan-400 flex-shrink-0" />
-                    $150 audit · $1,997 build · $1,499/mo
+                    $39 audit · $100/hr call
                   </span>
-                  <span className="block text-xs text-cyan-400">all-inclusive</span>
+                  <span className="block text-xs text-cyan-400">instant + done-for-you path</span>
                 </td>
               </tr>
               <tr className="border-b border-white/5">

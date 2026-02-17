@@ -1,0 +1,128 @@
+{
+  "_comment": "White Claw OpenClaw Config Template -- Replace YOUR_*_KEY values with actual keys",
+
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "auth": {
+      "mode": "token",
+      "token": "YOUR_GATEWAY_TOKEN_GENERATE_WITH_openssl_rand_hex_24"
+    }
+  },
+
+  "models": {
+    "providers": {
+
+      "google": {
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+        "apiKey": "YOUR_GEMINI_API_KEY",
+        "api": "google-generative-ai",
+        "models": [
+          {
+            "id": "gemini-2.0-flash",
+            "name": "Gemini 2.0 Flash",
+            "reasoning": false,
+            "input": ["text", "image"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 1048576,
+            "maxTokens": 8192
+          }
+        ]
+      },
+
+      "ollama": {
+        "_comment": "Remove this section if no local Ollama. Add/remove models to match 'ollama list'.",
+        "baseUrl": "http://127.0.0.1:11434/v1",
+        "models": [
+          {
+            "id": "llama3.2:latest",
+            "name": "llama3.2:latest",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "qwen2.5:7b",
+            "name": "qwen2.5:7b",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+
+      "ollama-cloud": {
+        "_comment": "Remove if client doesn't use Ollama Cloud. Get key from https://ollama.com/settings/keys",
+        "baseUrl": "https://ollama.com/v1",
+        "apiKey": "YOUR_OLLAMA_CLOUD_API_KEY",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "kimi-k2.5:cloud",
+            "name": "kimi-k2.5:cloud",
+            "reasoning": true,
+            "input": ["text", "image"],
+            "cost": { "input": 0.00015, "output": 0.0006, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "minimax-m2:cloud",
+            "name": "minimax-m2:cloud",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0.0001, "output": 0.0004, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+
+      "openrouter": {
+        "_comment": "Optional. Remove if not using OpenRouter. Get key from https://openrouter.ai/keys",
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "apiKey": "YOUR_OPENROUTER_KEY",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "meta-llama/llama-3.1-8b-instruct:free",
+            "name": "Llama 3.1 8B (Free)",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  },
+
+  "agents": {
+    "defaults": {
+      "model": {
+        "_comment": "Adjust based on client's providers. Cloud-first = never down.",
+        "primary": "google/gemini-2.0-flash",
+        "fallbacks": [
+          "ollama-cloud/kimi-k2.5:cloud",
+          "ollama/llama3.2:latest",
+          "openrouter/meta-llama/llama-3.1-8b-instruct:free"
+        ]
+      },
+      "workspace": "REPLACE_WITH_CLIENT_WORKSPACE_PATH",
+      "timeoutSeconds": 120,
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  }
+}

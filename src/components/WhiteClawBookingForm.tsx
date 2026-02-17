@@ -60,7 +60,7 @@ export default function WhiteClawBookingForm() {
       if (typeof gtag !== 'undefined') {
         gtag('event', 'conversion', {
           'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-          'value': 150.0,
+          'value': 39.0,
           'currency': 'USD'
         })
       }
@@ -223,10 +223,10 @@ export default function WhiteClawBookingForm() {
             Processing...
           </>
         ) : (
-          <>
-            Get My Plan
-            <Calendar size={16} />
-          </>
+        <>
+          Get My Audit or Book Call
+          <Calendar size={16} />
+        </>
         )}
       </button>
 

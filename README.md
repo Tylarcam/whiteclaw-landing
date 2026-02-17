@@ -6,7 +6,7 @@ Hybrid AI consulting + WhiteClaw automation service landing page built with Reac
 
 ### 1. Install Dependencies
 ```bash
-cd C:\Users\tylar\code\ai-education\whiteclaw-landing-react
+cd C:\Users\tylar\code\whiteclaw-landing-react
 npm install
 ```
 
@@ -141,6 +141,10 @@ if (typeof gtag !== 'undefined') {
 ```
 
 ## 🚢 Deployment
+
+### View Railway build/deploy logs
+- **Dashboard:** [Railway](https://railway.app/dashboard) → your project → **whiteclaw-landing** service → **Deployments** → open latest deployment → **View Logs** (Build + Deploy).
+- **CLI (from this folder after linking):** `railway link` (select project/service once), then `railway logs` for deploy logs or open the build URL from `railway up`.
 
 ### Railway (Recommended)
 1. Connect GitHub repo to Railway

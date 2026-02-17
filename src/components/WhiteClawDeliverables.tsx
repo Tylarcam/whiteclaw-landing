@@ -150,18 +150,18 @@ export default function WhiteClawDeliverables() {
               Ready to get unstuck with AI?
             </h3>
             <p className="text-slate-400 mb-8 text-lg">
-              Book your strategy call today. See results in 48 hours, scale when you're ready.
+              Get the $39 audit for instant clarity. Or book the $100/hr strategy call for done-for-you setup.
             </p>
             <button
               onClick={() => {
-                const element = document.querySelector('#book')
+                const element = document.querySelector('#pricing')
                 if (element) {
                   element.scrollIntoView({ behavior: 'smooth' })
                 }
               }}
               className="px-8 py-4 text-base font-semibold bg-cyan-400 text-slate-950 rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 mx-auto glow-cyan"
             >
-              Get Your Automation Built — $1,997
+              Get the Audit — $39
               <Target size={18} />
             </button>
             <p className="text-sm text-slate-500 mt-4">

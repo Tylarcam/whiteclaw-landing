@@ -44,7 +44,7 @@ export default function WhiteClawHero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-2xl md:text-3xl font-bold text-white mb-4"
         >
-          Done-For-You AI That Works in 48 Hours.
+          AI Workflow Audit — $39. Then Strategy Call When You're Ready.
         </motion.h2>
 
         <motion.p
@@ -53,7 +53,7 @@ export default function WhiteClawHero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-gray-300 mb-2"
         >
-          Most agencies charge $5K+ and take 4 weeks. We deliver in 2 days for $1,997.
+          Get an AI-powered audit + blueprint instantly. Book a $100/hr strategy call for done-for-you setup.
         </motion.p>
 
         <motion.p
@@ -62,7 +62,7 @@ export default function WhiteClawHero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="max-w-2xl mx-auto text-base text-gray-400 mb-10 leading-relaxed"
         >
-          We build your automation, handle the tech, and run it 24/7—so you don't have to touch Botpress, Voiceflow, or any code.
+          No debugging. No config hell. The audit shows you exactly what to automate—and the strategy call gets it built for you.
         </motion.p>
 
         <motion.div
@@ -74,17 +74,17 @@ export default function WhiteClawHero() {
           <div className="flex justify-center gap-8">
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-2 mb-2">
-                <Clock className="text-cyan-400" size={20} />
-                <span className="text-2xl font-bold text-cyan-400">60min</span>
+                <Zap className="text-cyan-400" size={20} />
+                <span className="text-2xl font-bold text-cyan-400">$39</span>
               </div>
-              <span className="text-slate-400 text-sm">We map your automation</span>
+              <span className="text-slate-400 text-sm">AI audit + blueprint (instant)</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-2 mb-2">
-                <Zap className="text-purple-400" size={20} />
-                <span className="text-2xl font-bold text-purple-400">48hrs</span>
+                <Clock className="text-purple-400" size={20} />
+                <span className="text-2xl font-bold text-purple-400">$100/hr</span>
               </div>
-              <span className="text-slate-400 text-sm">We build and test it</span>
+              <span className="text-slate-400 text-sm">Strategy call + done-for-you</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="flex items-center gap-2 mb-2">
@@ -103,11 +103,17 @@ export default function WhiteClawHero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
-            onClick={() => scrollToSection('#book')}
+            onClick={() => scrollToSection('#pricing')}
             className="group w-full sm:w-auto px-8 py-4 text-base font-semibold bg-cyan-400 text-slate-950 rounded-xl hover:bg-cyan-300 transition-all flex items-center justify-center gap-2 glow-cyan"
           >
-            Get Your Automation Built — $1,997
+            Get the Audit — $39
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+          <button
+            onClick={() => scrollToSection('#book')}
+            className="group w-full sm:w-auto px-8 py-4 text-base font-semibold bg-white/10 hover:bg-white/15 text-white rounded-xl border border-white/20 flex items-center justify-center gap-2 transition-all"
+          >
+            Book Strategy Call — $100/hr
           </button>
         </motion.div>
 
@@ -117,7 +123,7 @@ export default function WhiteClawHero() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-6 text-sm text-slate-500"
         >
-          ✓ Includes deliverables & templates &nbsp;|&nbsp; ✓ Upgrade path included
+          ✓ Instant delivery &nbsp;|&nbsp; ✓ No commitment &nbsp;|&nbsp; ✓ Upgrade to done-for-you anytime
         </motion.p>
       </div>
 
